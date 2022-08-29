@@ -113,3 +113,96 @@ Step 7 - Now obtain the symmetric points in the three quadrants and plot the coo
 Step 8 - Repeat the steps for region 1 until 2ry2x>=2rx2y. <br>
 
 #
+
+## **Experiment 8 : Filling the Objects using boundary fill algorithm**
+
+Boundary Fill Algorithm<br>
+
+This algorithm picks a point inside an object and starts to fill until it hits the boundary of the object. The color of the boundary and the color that we fill should be different for this algorithm to work. In this algorithm, we assume that color of the boundary is same for the entire object. <br>
+
+Step 1 − It takes an interior point(x, y), a fill color, and a boundary color as the input. <br>
+
+Step 2 − The algorithm starts by checking the color of (x, y). If it’s color is not equal to the fill color and the boundary color, then it is painted with the fill color and the function is called for all the neighbours of (x, y). <br> 
+
+Step 3 −If a point is found to be of fill color or of boundary color, the function does not call its neighbours and returns. <br>
+
+Step 4 −This process continues until all points up to the boundary color for the region have been tested. <br>
+
+#
+
+## **Experiment 9 : Filling the Objects using flood fill algorithm**
+
+Flood Fill Algorithm (4-connected & 8-connected) <br>
+ 
+Instead of relying on the boundary of the object, it relies on the fill colour. In other words, it replaces the interior colour of the object with the fill colour. When no more pixels of the original interior colour exist, the algorithm is completed. Algorithm for 4-connected :- <br> 
+
+Step 1 − Initialize the value of seed point (seedx, seedy), fcolor and dcol. <br>
+Step 2 − Define the boundary values of the polygon. <br>
+Step 3 − Check if the current seed point is of default color, then repeat steps 4 and 5 till the boundary pixels are reached. <br>
+Step 4 − Change the default color with the fill color at the seed point.<br>
+Step 5 − Recursively follow the procedure with four neighborhood points. <br>
+Step 6 − Exit <br>
+
+#
+ 
+## **Experiment 10 : Filling the Objects using Scan line algorithm**
+
+Scan Line Algorithm 
+
+This algorithm works by intersecting scan line with polygon edges and fills the polygon between pairs of intersections. The following steps depict how this algorithm works. <br>
+
+Step 1 − Find out the Ymin and Ymax from the given polygon. <br>
+Step 2 − ScanLine intersects with each edge of the polygon from Ymin to Ymax. Name each intersection point of the polygon. As per the figure shown above, they are named as p0, p1, p2, p3. <br>
+Step 3 − Sort the intersection point in the increasing order of X coordinate i.e. (p0, p1), (p1, p2), and (p2, p3). <br>
+Step 4 − Fill all those pairs of coordinates that are inside polygons and ignore the alternate pairs.<br>
+
+#
+
+## **Experiment 11 : Performing Clipping Operation using Cohen Sutherland Algorithm**
+
+It contains program for performing the line clipping operation using Cohen Sutherland.
+ 
+#
+
+## **Experiment 12 : Performing Clipping Operation on polygon using Sutherland Hodgeman Algorithm**
+
+It contains program for performing Clipping Operation on polygon using Sutherland Hodgeman Algorithm.
+
+#
+
+## **Experiment 13 : Character Generation**
+
+It contains program for performing character generation. <br>
+Character generated :- "L"
+
+#
+
+## **Experiment 14 : Performing 2D Transformations on object**
+
+Transformations play a very important role in manipulating objects on screen. There are three basic kinds of Transformations in Computer Graphics: <br>
+1. Translation 
+2. Rotation 
+3. Scaling 
+
+Translation: Translation refers to moving an object to a different position on screen. <br>
+Formula: X = x + tx, Y = y + ty; where tx and ty are translation coordinates <br>
+The OpenGL function is glTranslatef( tx, ty, tz ); <br>
+
+Rotation : Rotation refers to rotating a point. <br>
+Formula: X = xcosA – ysinA, Y = xsinA + ycosA; A is the angle of rotation. <br>
+The above formula will rotate the point around the origin. To rotate around a different point, the formula: <br>
+X = cx + (x-cx)*cosA - (y-cy)*sinA, <br>
+Y = cx + (x-cx)*sinA + (y-cy)*cosA, cx, cy is centre coordinates, A is the angle of rotation. <br> 
+The OpenGL function is glRotatef (A, x, y, z). <br>
+
+Scaling : Scaling refers to zooming in and out an object in different scales across axes. Formula: X = x*sx, Y = y*sy, sx, sy being scaling factors. The OpenGL function is glScalef(float x, float y, float z)<br>
+
+#
+ 
+## **Experiment 15 : Open End program**
+
+This open end program contains a figure that was specifically given by our teacher to perform.
+
+Hope you find it helpful !
+
+#
